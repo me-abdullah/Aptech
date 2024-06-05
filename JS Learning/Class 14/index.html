@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <img src="p1.jpg" alt="" name="img" width="100%" height="600px">
+  <center>
+    <button type="button" onclick="Next()">Next</button>
+    <button type="button" onclick="Previous()">Previous</button>
+  </center>
+
+
+  <script>
+    var pictures = new Array();
+
+    pictures[0] = new Image();
+    pictures[0].src = "p2.jpg";
+
+    pictures[1] = new Image();
+    pictures[1].src = "p3.jpg";
+
+    pictures[2] = new Image();
+    pictures[2].src = "p4.jpg";
+
+    var a = 0;
+    function Next() {
+
+      if (a > 3) {
+         a = 0;
+      }
+      document.img.src = pictures[0].src;
+    }
+
+    function Previous() {
+     
+      if (a < 0) {
+         a = 3;
+      }
+      document.img.src = pictures[0].src;
+
+    }
+
+  </script>
+</body>
+
+</html>

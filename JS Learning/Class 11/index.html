@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="hi"></h1>
+    <script>
+       // JS Hoisting
+        fun();
+        a = 10;
+        document.write(a);
+        a = 50;
+        document.write(a);
+        fun();
+        a = 10;
+        document.write(a);
+        function fun() {
+            document.write("Hello world");
+        }
+        let fun = () => {
+            document.write("Hello world");
+        }
+        var a;
+         let a;// block scope
+       // const a;
+
+        callbacks
+
+        function fun(some) {
+            document.write("hello" + some);
+        }
+
+        function First(para) {
+            document.write(para +"Hi");
+        }
+
+        function Second(param) {
+            document.write("Bye");
+        }
+
+        fun(First(Second("sss")));
+        Second("ssss");
+
+
+       // this keyword
+
+        let obj = {
+            firstName : "Accent",
+            lastName: "Edward",
+            age: 20,
+            fullName : function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+document.write(obj.fullName());
+function fun(a) {
+    document.write(10);
+    return a;
+}
+fun(10);
+let b = 10;
+document.write(a + b);
+    </script>
+</body>
+
+</html>

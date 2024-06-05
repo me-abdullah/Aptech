@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async function Prom() {
+        //     var KarachiW = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("21 Deg");
+        //         }, 2000);
+        //     })
+        //     var LahoreW = new Promise((resolve, reject) => {
+
+        //         setTimeout(() => {
+        //             resolve("25 Deg");
+        //         }, 4000);
+        //     })
+        //     var IslamabadW = new Promise((resolve, reject) => {
+
+        //         setTimeout(() => {
+        //             resolve("30 Deg");
+        //         }, 6000);
+        //     })
+
+        //     let KhiW = await KarachiW;
+        //     console.log("Fetching Karachi Weather Please Wait..!!");
+        //     console.log(`Karachi Weather Fetched at ${KhiW}`);
+
+        //     let LhrW = await LahoreW;
+        //     console.log("Fetching Lahore Weather Please Wait..!!");
+        //     console.log(`lahore Weather Fetched at ${LhrW}`);
+
+        //     let IsbW = await IslamabadW;
+        //     console.log("Fetching Islamabad Weather Please Wait..!!");
+        //     console.log(`Islamabad Weather Fetched at ${IsbW}`);
+        //     return [KhiW, LhrW, IsbW];
+        // }
+
+        // console.log("Welcome to Weather Control Room");
+        // let fullfill = ((value) => {
+        //     console.log(value);
+        // });
+        // Prom().then((value) => {
+        //     console.log(value);
+        // });
+        // let a = Prom()
+        // a.then((value) => {
+        //     console.log(value);
+        // })
+
+    let a =  fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+    console.log(a);
+    </script>
+</body>
+
+</html>

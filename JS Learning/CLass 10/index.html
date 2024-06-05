@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <script>
+        //functions
+        // function myFun(){
+        //     document.write("Hello this is function");
+        // }
+        // myFun();// normal function
+
+        // let func = () => {
+        //     document.write("Hello this is arrow function");
+        // }
+        // func();
+
+        // (() => {
+        //     document.write("this is annonymous function");
+        // })();
+
+        // let obt  = +prompt("enter obtain marks");
+        // let tot  = +prompt("enter total marks");
+
+        //     function Percentage(obtain_no,total_no) {
+        //         let result = obtain_no / total_no * 100 ;
+        //         document.write(result.toFixed(1));
+
+        //     }
+
+        //     Percentage(obt, tot);
+        //document.write(math.round(5.4))
+        let result = Math.floor(Math.random() * 100);
+
+        for (i = 5; i > 0; i--) {
+            var user_value = +prompt(`Welcome to number guessing game you have ${i} chances`);
+        }
+
+        if (user_value == result) {
+            document.write("<h1>congratulations you selected the right number</h1>");
+        }
+        else {
+            document.write(`<h3 style='color: red;'>sorry you selected the wrong number <br> the right number is ${result}</h3>`);
+        }
+
+
+
+
+
+        // document.write(result);
+
+
+
+    </script>
+</body>
+
+</html>

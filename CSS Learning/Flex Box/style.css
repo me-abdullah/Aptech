@@ -1,0 +1,77 @@
+/* :root{
+    --bg: #000;
+    --color: pink;
+    --size: 50px;
+    --lmargin:20px;
+}
+
+
+
+#div_01{
+    background: var(--bg);
+    color: var(--color);
+    font-size: var(--size);
+    font-size: 50px;
+}
+#div_02{
+    --bg: #000;
+    --color: red;
+background: var(--color);
+color: var(--bg);
+font-size: var(--size);
+}
+h1,h2,h3,h4,h5,h6{
+margin-left: var(--lmargin);
+}
+div{
+    margin-left: var(--lmargin);
+    border-radius: var(--lmargin);  
+} */
+/* 
+css variables -> local / global
+used to store some value */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+}
+
+#div_02{
+    position: relative;
+    top: 50px;
+    left: 20px;
+    /* margin-left: 50px; */
+ }
+#div_01{
+    position: sticky;
+    top: 10px;
+    left: 20px;
+    /* margin-left: 50px; */
+ }
+
+#div_03{
+    position: absolute;
+    background: pink;
+    top: 10px;
+    /* top: 50px;
+    left: 20px; */
+    /* margin-left: 50px; */
+ }
+
+#div_04{
+    position: fixed;
+    bottom: 0px;
+}
+section{
+    width: 4000px;
+    height: 4000px;
+}
+h1{
+    margin-left: 250px;
+}
