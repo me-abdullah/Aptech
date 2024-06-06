@@ -1,0 +1,23 @@
+body{
+    /* background-image: url('p1.jpeg');
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+ul li{
+    /* list-style-type: lower-roman; 
+    list-style-image:url('p1.jpeg');
+    font-family: cursive;*/
+}
+
+div{
+    width: 500px;
+    height: 400px;
+    /* background: red; */
+    /* background-image: linear-gradient(to right,yellow,red,blue,pink); */
+    /* background-image: radial-gradient(cyan,black,yellow,red,blue,pink); 
+    background-image: conic-gradient(cyan,black,yellow,red,blue,pink);*/
+    /* background: #666666;
+    box-shadow:  5px 5px 15px 20px grey       ; */
+    /* text-shadow: 5px 5px 5px grey; */
+}

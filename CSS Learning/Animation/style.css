@@ -1,0 +1,77 @@
+/* img{
+    width: 500px;
+    height: 400px;
+    transition: 2s;
+} */
+
+img:hover {
+     transform: rotate(90deg); 
+     transform: rotateX(60deg); 
+     transform: rotateY(180deg);
+     transform: scale(150%); 
+     transform: scaleX(150%); 
+     transform: scaleY(50%); 
+    transform: translate(100px); 
+    transform: translateX(-50px); 
+     transform: translateY(-20px);
+   box-shadow: 5px 5px 20px; 
+     transform: skewY(30deg); 
+    transform: skewX(360deg); 
+     transform: skew(180deg); 
+}
+
+/* div{
+    width: 300px;
+    height: 250px;
+    background: #CCC;
+    transition: 2s;
+}
+div:hover{
+background: pink;
+color: #fff;
+width: 100%;
+height: auto;
+} */
+
+/* #div_01 {
+    background: red;
+    width: 200px;
+    height: 200px;
+    animation-name: bilal;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 3s;
+} */
+
+@keyframes bilal {
+    /* from{
+        background: green;
+    margin-left: 200px;
+    }
+    to{
+        background:blue ;
+        margin-left: 0px;
+    } */
+    /* 0%{
+background:grey ;
+    }
+    25%{
+        background: yellow;
+        margin-left: 200px;
+    }
+    50%{
+        background: cyan;
+       
+        margin-top: 200px;
+    }
+    75%{
+        background: lightgreen;
+       
+        margin-right: 200px;
+    }
+    100%{
+        background: green;
+        
+        margin-right: 0px;
+    } */
+}
