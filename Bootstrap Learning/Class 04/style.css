@@ -1,0 +1,59 @@
+/* .navbar-nav nav-item .custom{
+    color: red !important; 
+} */
+
+/* a{
+    color: red !important;
+} */
+ nav img{
+    width: 50px;
+ }
+ .carousel-inner img{
+    max-width: 100%;
+    min-width: 300px;
+    max-height: 450px;
+    min-height: 200px;
+ }
+
+ .card img{
+  
+   transition: 2s;
+ }
+
+ .card{
+    display: inline-block;
+    margin: 0px 0px 20px 10px;
+    overflow: hidden;
+    
+ }
+
+nav{
+   
+   z-index: 1;
+ 
+}
+/* #carouselExampleIndicators{
+   margin-top: 100px !important;
+} */
+
+#link a{
+   text-decoration: none;
+   margin-left: 10px;
+   font-size: 20px;
+}
+
+.footer-img{
+   width: 70px;
+}
+
+.black{
+   color: #000;
+}
+
+ .card img:hover{
+transform: scale(105%);
+ }
+
+ /* a{
+
+ } */
