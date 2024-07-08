@@ -1,53 +1,116 @@
 <?php
 
-abstract class Car {
-    public $name;
-    public function __construct($name) {
+// Abstract class
+abstract class Shape {
+  protected $name;
+  
+  public function __construct($name) {
       $this->name = $name;
-    }
-    abstract public function intro() : string; 
   }
   
- // Child classes
-  class Audi extends Car {
-    public function intro() : string {
-      return "Choose German quality! I'm an $this->name!"; 
-    }
+  // Abstract method (to be implemented by subclasses)
+  abstract public function calculateArea();
+  
+  public function getName() {
+      return $this->name;
+  }
+}
+
+// Concrete subclass 1
+class Circle extends Shape {
+  private $radius;
+  
+  public function __construct($name, $radius) {
+      parent::__construct($name);
+      $this->radius = $radius;
   }
   
-  class Volvo extends Car {
-    public function intro() : string {
-      return "Proud to be Swedish! I'm a $this->name!"; 
-    }
+  // Implementation of abstract method
+  public function calculateArea() {
+      return pi() * $this->radius * $this->radius;
+  }
+}
+
+// Concrete subclass 2
+class Rectangle extends Shape {
+  private $width;
+  private $height;
+  
+  public function __construct($name, $width, $height) {
+      parent::__construct($name);
+      $this->width = $width;
+      $this->height = $height;
   }
   
-  class Citroen extends Car {
-    public function intro() : string {
-      return "French extravagance! I'm a $this->name!"; 
-    }
+  // Implementation of abstract method
+  public function calculateArea() {
+      return $this->width * $this->height;
   }
-  
-  // Create objects from the child classes
-  $audi = new audi("Audi");
-  echo $audi->intro();
-  echo "<br>";
-  
-  $volvo = new volvo("Volvo");
-  echo $volvo->intro();
-  echo "<br>";
-  
-  $citroen = new citroen("Citroen");
-  echo $citroen->intro();
-  echo "<br>";
-  class BMW extends Car{
-    public function intro() : string {
-        return "This is $this->name";
-    }
+}
+
+// Usage
+$circle = new Circle("Circle", 5);
+$rectangle = new Rectangle("Rectangle", 4, 6);
+
+// Using abstraction
+$shapes = array($circle, $rectangle);
+
+foreach ($shapes as $shape) {
+  echo "Area of " . $shape->getName() . ": " . $shape->calculateArea() . "<br>";
+}
+
+//encapsulation 
+
+// Class definition
+class Car {
+  // Private properties (encapsulated)
+  private $brand;
+  private $model;
+  private $year;
+
+  // Constructor to initialize properties
+  public function __construct($brand, $model, $year) {
+      $this->brand = $brand;
+      $this->model = $model;
+      $this->year = $year;
   }
 
-  $BMW = new BMW ("BMW");
-  echo $BMW->intro();
-// $honda = new Car("honda");
-// echo $honda->intro();
+  // Public methods (expose controlled access to properties)
+  public function getBrand() {
+      return $this->brand;
+  }
+
+  public function getModel() {
+      return $this->model;
+  }
+
+  public function getYear() {
+      return $this->year;
+  }
+
+  public function setBrand($brand) {
+      $this->brand = $brand;
+  }
+
+  public function setModel($model) {
+      $this->model = $model;
+  }
+
+  public function setYear($year) {
+      $this->year = $year;
+  }
+}
+
+// Usage
+$myCar = new Car("Toyota", "Camry", 2020);
+
+// Accessing properties indirectly through methods (encapsulation)
+echo "Brand: " . $myCar->getBrand() . "<br>";   // Outputs: Toyota
+echo "Model: " . $myCar->getModel() . "<br>";   // Outputs: Camry
+echo "Year: " . $myCar->getYear() . "<br>";     // Outputs: 2020
+
+// Modifying properties indirectly through methods (encapsulation)
+$myCar->setYear(2021);
+echo "Updated Year: " . $myCar->getYear() . "<br>";   // Outputs: 2021
 
 ?>
