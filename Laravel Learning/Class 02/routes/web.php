@@ -19,3 +19,15 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return view('hello');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/services', function () {
+    return view('services');
+});
+Route::get('/gallery/contact', function () {
+    return view('contact');
+});
+
+
+
