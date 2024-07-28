@@ -8,7 +8,7 @@ php artisan config:Cache
 php artisan migrate
 ```
 
-## Making 
+## Making Migration
 ```bash
 php artisan make:migration (table name) / create_customer_table
 ```
