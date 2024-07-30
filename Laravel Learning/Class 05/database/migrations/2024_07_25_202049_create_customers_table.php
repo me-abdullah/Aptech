@@ -20,7 +20,7 @@ return new class extends Migration
            // $table->integer('customer_phone' , 30);
             $table->text('address' , 30);
 //$table->string('customer_city' , 30);
-            $table->date('date_of_birth');
+          //  $table->string('date_of_birth');
             $table->enum('gender',["M","F","O"])->nullable();
 //$table->string('customer_image')->nullable();
             $table->string('password');

@@ -12,3 +12,4 @@ php artisan make:model Customer/model name
 php artisan make:model Customer/model name --migration
 ```
 
+## Insert Query

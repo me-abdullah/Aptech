@@ -9,53 +9,54 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Registration Form</title>
 </head>
 
 <body>
     <div class="container my-5 text-center">
         <h1 class="text-primary">Customer Registration</h1>
-        <form class="my-5" action="{{url('/')}}/customer" method="post">
+        <form class="my-5" action="{{ url('/') }}/customer" method="post">
+            @csrf
             <div class="row">
                 <div class="col-lg-6 my-3">
-                    <input type="text" name="fullname" class="form-control" placeholder="Full Name">
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="email"name="email"  class="form-control" placeholder="Email">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="text"  name="address" class="form-control" placeholder="Address">
+                    <input type="text" name="address" class="form-control" placeholder="Address" required>
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="text" name="city" class="form-control" placeholder="City">
+                    <input type="text" name="city" class="form-control" placeholder="City" required>
                 </div>
+              <!--  <div class="col-lg-6 my-3">
+                    <input type="date" name="date_of_birth" class="form-control" placeholder="Date Of Birth">
+                </div> -->
                 <div class="col-lg-6 my-3">
-                    <input type="date" name="dob" class="form-control" placeholder="Date Of Birth">
-                </div>
-                <div class="col-lg-6 my-3">
-                    <select class="form-control">
-                        <option>Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
+                    <select name="gender" class="form-control" required>
+                        <option value="">Select Gender</option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                        <option value="O">O</option>
                     </select>
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="password"name="password"  class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                 </div>
                 <div class="col-lg-6 my-3">
-                <select class="form-control">
-                        <option>Select Points</option>
+                    <select name="points" class="form-control" required>
+                        <option value="">Select Points</option>
                         <option value="0">0</option>
                         <option value="5">5</option>
                         <option value="10">10</option>
                     </select>
                 </div>
                 <div class="col-lg-6 my-3">
-                <select class="form-control">
-                        <option>Select Status</option>
-                        <option value="on">On</option>
-                        <option value="off">Off</option> 
+                    <select name="status" class="form-control" required>
+                        <option value="">Select Status</option>
+                        <option value="0">On</option>
+                        <option value="1">Off</option>
                     </select>
                 </div>
             </div>

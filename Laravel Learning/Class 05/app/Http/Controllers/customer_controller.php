@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Carbon\Carbon;
 
 class customer_controller extends Controller
 {
@@ -14,18 +15,21 @@ class customer_controller extends Controller
 
     public function store(Request $request)
     {
-        echo "<pre>";
-        print_r($request->all());
+        //echo "<pre>";
+//print_r($request->all());
 
         $customer = new Customer;
         $customer->name = $request['name'];
         $customer->email = $request['email'];
-        $customer->gender = $request['gender'];
         $customer->address = $request['address'];
-        $customer->state = $request['state'];
-        $customer->country = $request['country'];
-        $customer->dob = $request['dob'];
+        $customer->city = $request['city'];
+       // $customer->date_of_birth = ['date_of_birth']; // Change date format
+        $customer->gender = $request['gender'];
         $customer->password = md5($request['password']);
+        $customer->points = $request['points'];
+        $customer->status = $request['status'];
         $customer->save();
+
+        return redirect()->back()->with('success', 'Customer registered successfully.');
     }
 }
