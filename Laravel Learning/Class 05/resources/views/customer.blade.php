@@ -15,51 +15,51 @@
 <body>
     <div class="container my-5 text-center">
         <h1 class="text-primary">Customer Registration</h1>
-        <form class="my-5">
+        <form class="my-5" action="{{url('/')}}/customer" method="post">
             <div class="row">
                 <div class="col-lg-6 my-3">
-                    <input type="text" class="form-control" placeholder="Full Name">
+                    <input type="text" name="fullname" class="form-control" placeholder="Full Name">
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input type="email"name="email"  class="form-control" placeholder="Email">
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="text" class="form-control" placeholder="Address">
+                    <input type="text"  name="address" class="form-control" placeholder="Address">
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="email" class="form-control" placeholder="City">
+                    <input type="text" name="city" class="form-control" placeholder="City">
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="date" class="form-control" placeholder="Date Of Birth">
+                    <input type="date" name="dob" class="form-control" placeholder="Date Of Birth">
                 </div>
                 <div class="col-lg-6 my-3">
                     <select class="form-control">
                         <option>Select Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
                 <div class="col-lg-6 my-3">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password"name="password"  class="form-control" placeholder="Password">
                 </div>
                 <div class="col-lg-6 my-3">
                 <select class="form-control">
                         <option>Select Points</option>
-                        <option>0</option>
-                        <option>5</option>
-                        <option>10</option>
+                        <option value="0">0</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
                     </select>
                 </div>
                 <div class="col-lg-6 my-3">
                 <select class="form-control">
                         <option>Select Status</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                      
+                        <option value="on">On</option>
+                        <option value="off">Off</option> 
                     </select>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
