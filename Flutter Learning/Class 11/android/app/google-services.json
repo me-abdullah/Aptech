@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "969156982102",
+    "project_id": "fir-aptech-743d9",
+    "storage_bucket": "fir-aptech-743d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969156982102:android:56b738c37cc8b1858b52f7",
+        "android_client_info": {
+          "package_name": "com.example.animation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNSKSXEa12JO4Al7LvJw2LbxQDhpf1cD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
